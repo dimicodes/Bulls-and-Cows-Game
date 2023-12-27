@@ -112,7 +112,6 @@ public class Main {
         for (int i = 0; i < length; ) {
             secretPrepared.append("*");
             int randomIndex = (int) (Math.random() * (userRange));
-//            System.out.println("random index: " + randomIndex);
             if (!usedCharacters[randomIndex]) {
                 secretCode[i] = (char) characters[randomIndex];
                 usedCharacters[randomIndex] = true;
@@ -125,8 +124,7 @@ public class Main {
         if(userRange > 10) {
             secretPrepared.append(" (0-9, a-").append(characters[userRange - 1]).append(").");
         }
-
-        System.out.println(secretCode);
+        
         System.out.println("The secret is prepared: " + secretPrepared);
         return secretCode;
     }
